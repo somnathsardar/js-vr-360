@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>VR 360</title>
+    <!-------------------------------------Javascipt Link------------------------------------->
+    <script src="assets\js\jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="assets\js\aframe.0.9.2.min.js" type="text/javascript"></script>
+    <script src="assets\js\main.js" type="text/javascript"></script>
+    <!-----------------------------------Stylesheet------------------------------------------>
+    <link href="assets\css\style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body>
+    <!-------------------------------------Compass-------------------------------------------->
+    <div class="compass-container">
+      <div id="arrow" class="arrow"></div>
+    </div>
+    <!---------------------------------------Zoom Control------------------------------------->
+    <div class="zoom-container">
+      <button id="reset_camera_zoom">Reset</button>
+      <button id="zoom_in">+</button>
+      <button id="zoom_out">-</button>
+    </div>
+    <!-----------------------------Select Different Category Images--------------------------->
+    <select id="selectBackgroundImage">
+      <option value="images/img/bed_room.jpg" selected>Bed Room</option>
+      <option value="images/img/sitting_room.jpg" >Living Room</option>
+      <option value="images/img/bathroom.jpg" >Bathroom</option>
+    </select>
+    <!------------------------------------Vastu Button---------------------------------------->
+    <button class="vastu-button" onclick="openNav()">Vastu</button>
+    <!------------------------------------SIde Nav-------------------------------------------->
+    <div class="sidenav" id="myNavbar">
+      <i class="arrow left" href="javascript:void(0)" onclick="closeNav()"></i>
+      <div id="vastuContent" style="width: 80%; margin: 0px auto;">
+        <!-- <h1>General Vastu Tips for Living Room</h1>
+        <ul>
+          <li>Never have beam or girder running along the ceiling of the living room, since sitting under one causes mental turmoil and stress.</li>
+          <li>Colour the walls with either white or light green as this promotes a sense of togetherness and affection between the guests and occupants. Do not use dark shades except on the east wall.</li>
+          <li>Use light curtains on the windows and doors in the north-east wall and heavy curtains for the south-west wall of the living room.</li>
+          <li>Keep some space in the north-east corner of the living room. Ensure that it remains clean and clutter-free. Enhance the tranquility of this space by placing a few potted plants.</li>
+          <li>Keep some space in the north-east corner of the living room. Ensure that it remains clean and clutter-free. Enhance the tranquility of this space by placing a few potted plants.</li>
+          <li>Place television and air conditioner in the south-east or the agni corner.</li>
+          <li>To generate positive energy and elevate the mood, display paintings depicting beauty of nature or scenery that adds tranquility to the room. Avoid disturbing pictures of war, wild animals, horror, etc. and even those of the deceased family members.</li>
+          <li>Never display artificial flowers as it is deemed inauspicious. Even dried flowers attract misfortune as they represent the autumn season. Also, never keep cacti or bonsai as they have a negative impact on the careers and financial prospects of the occupants.</li>
+          <li>Never display artificial flowers as it is deemed inauspicious. Even dried flowers attract misfortune as they represent the autumn season. Also, never keep cacti or bonsai as they have a negative impact on the careers and financial prospects of the occupants.</li>
+          <li>Hang heavy chandelier in the south or west of the room. Avoid hanging it in the exact centre (Brahmsthan). The living room should be lit brightly.</li>
+          <li>Seat the guests in the north-west portion of the room. This quadrant of air and movement ensures that they do not overstay their welcome!</li>
+          <li>The head of the family should always occupy the south-west quadrant, facing either east or north. This ensures his remaining in command and prevents guests from dominating</li>
+        </ul> -->
+      </div>
+    </div>
+    <!------------------------------------Scene Control--------------------------------------->
+    <a-scene vr-mode-ui="enabled: true" cursor="rayOrigin: mouse">
+      <a-sky id="background"></a-sky>
+      <!-- Camera and Cursor -->  
+      <a-camera rotation-reader id="camera" look-controls-enabled="true" mouse-cursor>
+        <a-cursor id="cursor" color="#11D8C4"></a-cursor>
+      </a-camera>
+
+      <!-- <a-plane position='-6 1.7 -1' depth='0' height='0.5' width='4' visible='true' class='text' id='text10' rotation='0 90 0'>
+        <a-text color='#000' value='Lounge Etched Dark Grey 30cm x 60cm Wall Tile' width='4' position='-1.9 0 0' rotation='0 0 0'></a-text>
+      </a-plane> -->
+
+    </a-scene>
+
+    <script>
+      $(document).ready(function() {
+        $(".a-enter-vr").hide();
+      });
+    </script>
+  </body>
+</html>

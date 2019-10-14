@@ -1,0 +1,134 @@
+@font-face {
+    font-family: galanoRegular;
+    src: url(../../fonts/GALANO\ GROTESQUE\ W00\ REGULAR.TTF);
+}
+.compass-container{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url(../../images/compass.svg) rgba(255,255,255,0.5);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 100;
+}
+#arrow{
+    width: 70px;
+    height: 100px;
+    border: 1px solid black;
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,1), rgba(0,0,0,0.7));
+    clip-path: polygon(48% 0, 66% 28%, 51% 17%, 52% 100%, 48% 100%, 47% 16%, 30% 28%);
+    position: relative;
+}
+button{
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+.zoom-container{
+    width: 50px;
+    height: 140px;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+.zoom-container button{
+    position: relative;
+    border: none;
+    cursor: pointer; 
+    font-size: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+.zoom-container button:first-child{
+    font-size: 15px;
+    font-weight: 540;
+    padding: 5px;
+    height: 40px;
+}
+.zoom-container button:nth-child(2){
+    margin: 10px 0px;
+    height: 40px;
+}
+.zoom-container button:last-child{
+    font-size: 25px;
+    height: 40px;
+}
+#selectBackgroundImage{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+    width: 150px;
+    height: 30px;
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    cursor: pointer;
+}
+.vastu-button{
+    width: 150px;
+    height: 5%;
+    border: none;
+    cursor: pointer; 
+    font-size: 15px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 100;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+.sidenav{
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+i {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    font-size: 100px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    padding: 3px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+#vastuContent{
+    display: none;
+    font-family: galanoRegular;
+}
+
+#vastuContent ul li{
+    margin-top: 10px;
+    font-size: 18px;
+}
